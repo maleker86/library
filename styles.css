@@ -1,5 +1,34 @@
-html {
-    height: 100%;
-    width: 100%;
+/* html {
+  height: 100%;
+  width: 100%;
+} */
+
+* {
+    padding: 0;
+    margin:0;
+    /* border: 1px solid black; */
   }
   
+  .container {
+    display:grid;
+    grid: auto 1fr / 1fr;
+  }
+  
+  .container * {
+    border: 1px solid black; 
+  }
+  
+  /* wOW this was hard why do minmax not make sense!!! */
+  .bookcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .book {
+    grid-column: span 1;
+    grid-row: span 1;
+    border: 1px solid lightblue;
+    text-align:center;
+  }
