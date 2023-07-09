@@ -41,8 +41,8 @@ function displayBooks() {
     book.setAttribute('class', 'book');
     book.innerText = myLibrary[element].title + "\n" +myLibrary[element].author +  "\n" +myLibrary[element].pages.toString() +  "\n" +myLibrary[element].read;
 
-    myLibrary = []; 
     }
+    myLibrary = []; 
 } 
 
 let theHobbit = new Book("The Hobbit","JRR Tolkien",295, "not read yet");
