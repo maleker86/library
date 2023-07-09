@@ -24,28 +24,33 @@ function Book(title, author, pages, read) {
   }
 }
 
-function addBook(bookTitle) {
-  console.log("I understand this as " + toString(bookTitle));
-  myLibrary.push(bookTitle.info());
+function addBook(book) {
+  //console.log("I understand this as " + book);
+  // myLibrary.push(bookTitle.info());
+  console.log(book);
+  myLibrary.push(book);
   console.log(myLibrary);
 }
 
 function displayBooks() {
-  for (let i = 0; i < myLibrary.length; i++) {
+  for (element in myLibrary) {
   let book = document.createElement("div");
     
-    console.log(myLibrary[i]);
+    console.log(myLibrary[element]);
     BookCase.append(book);
     book.setAttribute('class', 'book');
-    book.innerText = myLibrary[i];
+    book.innerText = myLibrary[element].title + "\n" +myLibrary[element].author +  "\n" +myLibrary[element].pages.toString() +  "\n" +myLibrary[element].read;
   }
+  myLibrary = [];
 } 
 
-const theHobbit = new Book("The Hobbit","JRR Tolkien",295, "not read yet");
-const newMoon = new Book("New Moon", "Stephanie Meyer", 350, "read")
+let theHobbit = new Book("The Hobbit","JRR Tolkien",295, "not read yet");
+let newMoon = new Book("New Moon", "Stephanie Meyer", 350, "read")
+
+addBook(theHobbit);
+addBook(newMoon);
 
 //console.log(theHobbit.info());
 //console.log(newMoon.info());
 
-//console.log(theHobbit.valueOf());
-//console.log(Book.prototype.hasOwnProperty('valueOf'));
+// console.log(theHobbit.valueOf());
