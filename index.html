@@ -1,23 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
-    <link rel="stylesheet" href="styles.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>object Constructors</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-    <div class="container">
-        <h1>Title :)</h1>
-        <p>Hello this is a new document.</p>
-        <div class="bookcase">
-          <div class="book">dummy item</div>
-          <div class="book">Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligulaf</div>
-        </div>
-      </div>
 
-    <script src="script.js" defer></script>
+<body>
+  <div class="container">
+    <h1>Title :)</h1>
+    <p>Hello this is a new document.</p>
+   
+    <button id="new_book">NEW BOOK</button>
+    <div class="form_container">
+      <form id="book_form">
+        <h2 id="form_title">New Book!</h2>
+          
+          <p id="form_error_message"></p>
+        
+          <div class="form_element">
+            <label for="book_title">Book Title</label>
+            <input type="text" class="book_title" name="book_title" placeholder="Book Title" required></input>
+              </div>
+          
+          <div class="form_element">
+            <label for="author">Author</label>
+            <input type="text" class="author" name="author" placeholder="Author" required></input>
+              </div>
+          
+          <div class="form_element">
+            <label for="page_count">Page Count</label>
+            <input type="number" class="page_count" name="page_count" placeholder="Page Count" required></input>
+              </div>
+          
+            <fieldset>
+            <legend>Read Status</legend>
+
+              <div class="form_element">
+            <input type="radio" class="read_status" id="not_read" name="read_status" value="not-read"></input>
+            <label for="not_read">Not Read</label>
+              </div>
+              
+          <div class="form_element">
+            <input type="radio" class="read_status" id="read" name="read_status" value="read"></input>
+            <label for="read">Read</label>
+              </div>
+              
+            </fieldset>
+
+        <button type="submit" id="submit-new_book">Submit</button>
+
+      </form>
+    </div>
+    
+    <div class="bookcase">
+    </div>
+
+  </div>
+<script src="script.js" defer></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
 </body>
 </html>
