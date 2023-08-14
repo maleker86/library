@@ -3,41 +3,90 @@
   width: 100%;
 } */
 
+body {
+  background-color: lightgray;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: .9rem;
+}
+
 * {
-    padding: 0;
-    margin:0;
-    /* border: 1px solid black; */
-  }
-  
-  .container {
-    height:100vh;
-    display:grid;
-    grid: auto auto 1fr / 1fr;
-  }
-  
-  .container * {
-    border: 1px solid black; 
-  }
-  
-  /* wOW this was hard why do minmax not make sense!!! */
-  .bookcase {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(10rem, 1fr));
-    gap: 10px;
-    padding: 10px;
-  }
-  
-  .book {
-    grid-column: span 1;
-    grid-row: span 1;
-    display:grid;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid lightblue;
-    text-align: center;
-    overflow-y: auto;
-    /* text-align:justify;
-    text-align-last: center; */
-    padding: 1rem;
-  }
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  /* border: black 1px solid; */
+}
+
+.container {
+  height:100vh;
+  display:grid;
+  grid: auto auto auto 1fr / 1fr;
+  /* gap: 5px; */
+}
+
+.container * {
+  /* padding:5px; */
+  border-radius: 5px;
+}
+
+h1, h2, p, div {
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
+  cursor: pointer;
+
+  margin: 5px auto;
+}
+
+.bookcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.book {
+  box-sizing: border-box;
+  grid-column: span 1;
+  grid-row: span 1;
+  display:grid;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightblue;
+  text-align: center;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: white;
+}
+
+
+.form_container {
+  display:none;
+  align-items: space-around;
+  justify-content: space-around;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-around;
+  width: min-content;
+  background-color: white;
+  padding:.8rem;
+}
+
+form input[type=text] {
+  width: 50vw;
+}
+
+form * {
+  padding: 5px;
+}
+
+form button {
+  margin-top: 1rem;
+} 
