@@ -51,20 +51,22 @@ function submitForm(necessary) {
   return false;
 }
 
-function Book(title, author, pages, read) {
+class Book {
   
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  
-  // this.book_title = title;
-  // this.author = author;
-  // this.page_count = pages;
-  // this.read_status = read;
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    
+    // this.book_title = title;
+    // this.author = author;
+    // this.page_count = pages;
+    // this.read_status = read; 
   
   this.info = function() {
     console.log(title, `by ${author},`, `${pages} pages,`,read);
+  }
   }
 }
 
